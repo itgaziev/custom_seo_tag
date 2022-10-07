@@ -110,7 +110,7 @@ class SeoTags
         $sitemapIndexFile = new SitemapIndex('sitemap', [
             'SITE_ID' => SITE_ID,
             'PROTOCOL' => 'https',
-            'DOMAIN' => 'sankera.ru',
+            'DOMAIN' => '',
         ]);
 
         $sitemapIndexFile->appendIndexEntry($sitemapFile);
@@ -121,7 +121,7 @@ class SeoTags
         $sitemapFile = new SitemapFile(self::$filename, [
             'SITE_ID' => SITE_ID,
             'PROTOCOL' => 'https',
-            'DOMAIN' => 'sankera.ru',
+            'DOMAIN' => '',
         ]);
 
         if ($sitemapFile->isExists()) {
@@ -141,7 +141,7 @@ class SeoTags
             }
 
             $sitemapFile->addEntry([
-                'XML_LOC' => 'https://sankera.ru' . $arFields['PROPERTY_NEW_URL_VALUE'],
+                'XML_LOC' => '' . $arFields['PROPERTY_NEW_URL_VALUE'],
                 'XML_LASTMOD' => $dateChange->format('c'),
                 // 'XML_CHANGEFREQ' => '',
                 // 'XML_PRIORITY' => '0.5',
